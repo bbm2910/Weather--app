@@ -1,0 +1,394 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+	--white: #fff;
+	--black: #0e1108;
+	--light-black: #11150a;
+	--green: #b3e09c;
+	--yellow: #dfeb57;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.wrapper {
+	width: 90%;
+	margin: 1% auto;
+}
+.search {
+	background: var(--light-black);
+	padding: 1% 2%;
+	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+}
+.logo {
+	color: var(--white);
+	margin-left: 30%;
+	display: inline-block;
+	position: absolute;
+	white-space: nowrap;
+	animation: moveRightToLeft 20s linear infinite;
+	font-size: 1.2rem;
+}
+.logo span {
+	color: var(--yellow);
+	font-size: 1.5rem;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+.logo-scroll {
+	width: 100%;
+	margin-left: 1%;
+	overflow: hidden;
+	position: relative;
+}
+@keyframes moveRightToLeft {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: -80%;
+	}
+}
+.search-input {
+	font-size: 1.1rem;
+	border-radius: 5px;
+	padding: 0 1%;
+	transition-duration: 0.3s;
+}
+.search-input:focus {
+	outline: none;
+	padding: 0 2%;
+}
+.search-btn {
+	font-size: 1.1rem;
+	margin-left: 2%;
+	border-radius: 5px;
+	background: var(--green);
+	transition-duration: 0.3s;
+	padding: 0 1%;
+}
+.search-btn:hover {
+	background: var(--yellow);
+}
+.error {
+	text-align: center;
+	margin-top: 3%;
+	font-weight: 100;
+	background: var(--yellow);
+	padding: 10% 0;
+	border-radius: 5px;
+	display: none;
+	opacity: 80%;
+}
+.ghost-image {
+	width: 10%;
+	margin-bottom: 3%;
+}
+.error-h2 {
+	font-size: 1.5rem;
+}
+.error-p {
+	font-weight: 300;
+}
+.content {
+	background: var(--green);
+	color: var(--white);
+	margin-top: 3%;
+	border-radius: 5px;
+	padding: 2%;
+	height: 70vh;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	background-color: rgba(179, 224, 156, 0.3);
+	/* display: none; */
+}
+.today {
+	color: var(--light-black);
+	font-size: 1.4rem;
+	font-weight: 100;
+}
+.city {
+	color: var(--light-black);
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin-top: 2%;
+}
+.country {
+	color: var(--light-black);
+	font-size: 1.2rem;
+	font-weight: 100;
+}
+.weather-details {
+	color: var(--black);
+	font-size: 3rem;
+	font-weight: 100;
+}
+.weather-icon {
+	width: 50%;
+	border-radius: 50%;
+	box-shadow: 0px 10px 15px 9px rgba(0, 0, 0, 0.1);
+}
+.temperature {
+	margin-top: 5%;
+	color: var(--black);
+	font-size: 6rem;
+	font-weight: 700;
+}
+.temperature span {
+	font-weight: 100;
+	font-size: 3rem;
+}
+.details {
+	font-size: 1rem;
+	font-weight: 300;
+	color: var(--light-black);
+	margin: 1% 0;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.details p {
+	background: var(--yellow);
+	padding: 2%;
+	text-align: center;
+	width: 30%;
+	margin-left: 70%;
+}
+.details span {
+	font-weight: 300;
+	padding: 2%;
+	border-radius: 5px;
+	width: 30%;
+	background: var(--light-black);
+	color: var(--white);
+	text-align: center;
+	margin-left: 10%;
+}
+.secondary-top {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+}
+.secondary-top-left {
+	grid-row: 1/2;
+}
+.secondary-top-right {
+	grid-row: 1/2;
+}
+.days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	text-align: center;
+	margin-top: 10%;
+	color: var(--black);
+	gap: 2%;
+}
+.days div {
+	background: var(--white);
+	padding: 5%;
+	border-radius: 10px;
+	background-color: rgba(222, 223, 222, 0.6);
+	transition-duration: 0.3s;
+}
+.days div:hover {
+	transform: scale(1.2);
+	background-color: var(--yellow);
+}
+.day {
+	font-size: 1.1rem;
+	font-weight: 300;
+	margin-top: 5%;
+}
+.day-degrees {
+	margin-top: 20%;
+	font-weight: 400;
+}
+.first-day {
+	margin-top: 0;
+}
+.satelite {
+	width: 50%;
+	animation: spin 20s linear infinite;
+}
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.clear {
+	background: url('./images/clear.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.rain {
+	background: url('./images/rain.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.drizzle {
+	background: url('./images/drizzle.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+
+.cloudy {
+	background: url('./images/cloudy.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.haze {
+	background: url('./images/haze.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.snow {
+	background: url('./images/snow.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.thunderstorm {
+	background: url('./images/thunderstorm.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+.git-hub-icon {
+	width: 2%;
+	margin-left: 47%;
+	border-radius: 50%;
+	transition-duration: 0.3s;
+}
+.git-hub-icon:hover {
+	background: var(--white);
+}

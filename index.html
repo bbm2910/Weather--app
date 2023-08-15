@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Weather</title>
+      <link rel="stylesheet" href="./styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="search">
+            <input type="text" placeholder="Enter a location..." spellcheck="false" class="search-input">
+            <button class="search-btn">Search</button>
+            <div class="logo-scroll">
+               <p class="logo">Weather<span>Wise</span> - - - your daily forecast!</p>
+            </div>
+         </div>
+         <div class="error">
+            <img src="./images/ghost-outline.svg" class="ghost-image" alt="ghost image">
+            <h2 class="error-h2">Oops! Invalid Location</h2>
+            <br>
+            <p class="error-p">We're sorry, but the location you entered doesn't seem to be valid. Please make sure you're entering a valid city or town name, and try again. 
+            </p>
+         </div>
+         <div class="content" id="loadingScreen">
+            <div class="main-content">
+               <p class="today"></p>
+               <h1 class="city">London</h1>
+               <p class="country">GB</p>
+               <img src="./images/cloudy.png" alt="" class="weather-icon">
+               <h2 class="temperature"></h2>
+               <p class="weather-details"></p>
+            </div>
+            <div class="secondary-content">
+               <div class="secondary-left">
+                  <div class="details">
+                     <p>Wind:</p>
+                     <span class="wind"></span>
+                  </div>
+                  <div class="details">
+                     <p class="title">Humidity:</p>
+                     <span class="humidity"></span>
+                  </div>
+                  <div class="details">
+                     <p>Pressure</p>
+                     <span class="pressure"></span>
+                  </div>
+               </div>
+               <div class="secondary-right">
+                  <div class="details">
+                     <p>Feels like</p>
+                     <span class="feels-like"></span>
+                  </div>
+                  <div class="details">
+                     <p>Sunrise</p>
+                     <span class="sunrise"></span>
+                  </div>
+                  <div class="details">
+                     <p>Sunset</p>
+                     <span class="sunset"></span>
+                  </div>
+               </div>
+               <div class="secondary-bottom">
+                  <div class="days">
+                     <div>
+                        <h3 class="day"></h3>
+                        <p class="day-degrees first-day"><img src="/images/satelite.png" alt="" class="satelite"></p>
+                     </div>
+                     <div>
+                        <h3 class="day second-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                     <div>
+                        <h3 class="day third-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                     <div>
+                        <h3 class="day fourth-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                     <div>
+                        <h3 class="day fifth-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                     <div>
+                        <h3 class="day sixth-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                     <div>
+                        <h3 class="day seventh-day"></h3>
+                        <p class="day-degrees"></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <a href="https://github.com/bbm2910" target="_blank" class="a-git-hub-icon"><img src="./images/github-icon.png" alt="" class="git-hub-icon"></a>
+      <script src="index.js" defer></script>
+   </body>
+</html>
