@@ -37,7 +37,7 @@ const getData = async (city) => {
         //Set the temp for each day
         const kelvin = 273.15;
         const elements = document.querySelectorAll(".day-degrees");
-        for (let i = 1; i < elements.length; i++) {
+        for (let i = 0; i < elements.length; i++) { //add or remove the satelite
             const temperatureInKelvin = forecastData.list[i].main.temp;
             const temperatureInCelsius = (temperatureInKelvin - kelvin).toFixed(0) + "°C";
             elements[i].innerText = temperatureInCelsius;
@@ -65,11 +65,13 @@ const getDatafor7days = async (lat, lon) => {
 };
 
 const updateWeatherUI = (data, dayIndex) => {
-    document.querySelector(".city").textContent = data.name;
+
     const weatherDetailsElement = document.querySelector(".weather-details");
     const description = data.weather[0].description;
     const capitalizedDescription = description.charAt(0).toUpperCase() + description.slice(1);
     weatherDetailsElement.textContent = capitalizedDescription;
+
+    document.querySelector(".city").textContent = data.name;
     document.querySelector(".temperature").textContent = Math.floor(data.main.temp) + "°C";
     document.querySelector(".wind").textContent = data.wind.speed + " km/h";
     document.querySelector(".humidity").textContent = data.main.humidity + " %";
@@ -84,7 +86,7 @@ const updateWeatherUI = (data, dayIndex) => {
     const currentDate = new Date();
     const currentDayOfWeek = currentDate.getDay();
     const dayElements = document.querySelectorAll('.day');
-    for (let i = 1; i < dayElements.length; i++) {
+    for (let i = 0; i < dayElements.length; i++) { //add or remove the satelite
         const dayIndex = (currentDayOfWeek + i) % 7;
 
         const dayName = daysOfWeek[dayIndex];
@@ -101,30 +103,30 @@ function changeBackgroundAndIcon(data) {
 
     const weatherClasses = ["clear", "rain", "cloudy", "drizzle", "mist", "haze", "snow", "thunderstorm"];
     weatherClasses.forEach((weatherClass) => {
-        body.classList.remove(weatherClass);
+        weatherIcon.classList.remove(weatherClass);
     });
 
     if (data.weather[0].main == "Clear") {
         weatherIcon.src = "./images/clear.png";
-        body.classList.add("clear");
+        weatherIcon.classList.add("clear");
     } else if (data.weather[0].main == "Rain") {
         weatherIcon.src = "./images/rain.png";
-        body.classList.add("rain");
+        weatherIcon.classList.add("rain");
     } else if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "./images/cloudy.png";
-        body.classList.add("cloudy");
+        weatherIcon.classList.add("cloudy");
     } else if (data.weather[0].main == "Drizzle") {
         weatherIcon.src = "./images/drizzle.png";
-        body.classList.add("drizzle");
+        weatherIcon.classList.add("drizzle");
     } else if (data.weather[0].main == "Mist" || data.weather[0].main == "Haze") {
         weatherIcon.src = "./images/mist.png";
-        body.classList.add("haze");
+        weatherIcon.classList.add("haze");
     } else if (data.weather[0].main == "Snow") {
         weatherIcon.src = "./images/snow.png";
-        body.classList.add("snow");
+        weatherIcon.classList.add("snow");
     } else if (data.weather[0].main == "Thunderstorm") {
         weatherIcon.src = "./images/thunderstorm.png";
-        body.classList.add("thunderstorm");
+        weatherIcon.classList.add("thunderstorm");
     }
 }
 
@@ -160,4 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //Search for a city
 searchButton.addEventListener("click", () => {
     getData();
+});
+searchField.addEventListener("keypress", (event) => {
+    // Check if the pressed key is Enter (key code 13)
+    if (event.key === "Enter") {
+        getData();
+    }
 });
