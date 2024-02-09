@@ -99,36 +99,41 @@ const updateWeatherUI = (data, dayIndex) => {
 
 
 function changeBackgroundAndIcon(data) {
+    console.log("this is" + data.weather[0].main);
     document.body.style.opacity = 1; // Show the page content by setting the body opacity to 1
 
-    const weatherClasses = ["clear", "rain", "cloudy", "drizzle", "mist", "haze", "snow", "thunderstorm"];
+    const weatherClasses = ["clear", "rain", "cloudy", "drizzle", "mist", "haze", "snow", "thunderstorm", "smoke"];
     weatherClasses.forEach((weatherClass) => {
-        weatherIcon.classList.remove(weatherClass);
+        document.body.classList.remove(weatherClass); // Remove existing weather classes from body
     });
 
     if (data.weather[0].main == "Clear") {
+        document.body.classList.add("clear");
         weatherIcon.src = "./images/clear.png";
-        weatherIcon.classList.add("clear");
     } else if (data.weather[0].main == "Rain") {
+        document.body.classList.add("rain");
         weatherIcon.src = "./images/rain.png";
-        weatherIcon.classList.add("rain");
     } else if (data.weather[0].main == "Clouds") {
+        document.body.classList.add("cloudy");
         weatherIcon.src = "./images/cloudy.png";
-        weatherIcon.classList.add("cloudy");
     } else if (data.weather[0].main == "Drizzle") {
+        document.body.classList.add("drizzle");
         weatherIcon.src = "./images/drizzle.png";
-        weatherIcon.classList.add("drizzle");
     } else if (data.weather[0].main == "Mist" || data.weather[0].main == "Haze") {
+        document.body.classList.add("haze");
         weatherIcon.src = "./images/mist.png";
-        weatherIcon.classList.add("haze");
     } else if (data.weather[0].main == "Snow") {
+        document.body.classList.add("snow");
         weatherIcon.src = "./images/snow.png";
-        weatherIcon.classList.add("snow");
     } else if (data.weather[0].main == "Thunderstorm") {
+        document.body.classList.add("thunderstorm");
         weatherIcon.src = "./images/thunderstorm.png";
-        weatherIcon.classList.add("thunderstorm");
+    } else if (data.weather[0].main == "Smoke") {
+        document.body.classList.add("smoke");
+        weatherIcon.src = "./images/cloudy.png";
     }
 }
+
 
 
 // Set sunrise-sunset
@@ -169,3 +174,4 @@ searchField.addEventListener("keypress", (event) => {
         getData();
     }
 });
+
