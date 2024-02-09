@@ -162,8 +162,8 @@ body {
 	display: inline-block;
 	position: absolute;
 	white-space: nowrap;
-	animation: moveRightToLeft 20s linear infinite;
-	font-size: 1.5rem;
+	animation: moveRightToLeft 15s linear infinite;
+	font-size: 2rem;
 	font-weight: 700;
 }
 .logo span {
