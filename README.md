@@ -34,6 +34,18 @@ If the API response is missing latitude or longitude data, an error message is a
 __Current Day Display:__
 The application automatically displays the current day's weather and the weather for the next 6 days.
 
+## Installing and running
+1. Clone the repository
+2. Navigate to the project directory
+3. Install dependencies
+4. Start the app
+   
+   ```
+   git clone https://github.com/bbm2910/memory-app.git
+   cd memory-card
+   npm install
+   npm start
+   
 ## Acknowledgments
 [OpenWeatherMap API](https://openweathermap.org/api) for providing reliable weather data.
 
