@@ -34,4 +34,7 @@ If the API response is missing latitude or longitude data, an error message is a
 __Current Day Display:__
 The application automatically displays the current day's weather and the weather for the next 6 days.
 
+## Acknowledgments
+[OpenWeatherMap API](https://openweathermap.org/api) for providing reliable weather data.
+
 ## [Demo](https://bbm2910.github.io/Weather--app/)
