@@ -42,8 +42,8 @@ The application automatically displays the current day's weather and the weather
 4. Start the app
    
    ```
-   git clone https://github.com/bbm2910/memory-app.git
-   cd memory-card
+   git clone https://github.com/bbm2910/Weather--app.git
+   cd weather--app
    npm install
    npm start
    
