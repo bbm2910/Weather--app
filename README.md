@@ -1,5 +1,6 @@
 # Weather app
 ![My Image](Screenshot.png)
+## [Demo](https://bbm2910.github.io/weather-check/)
 
 ## Introduction
 Weather affects our daily lives in countless ways. Whether you're planning a trip, choosing your outfit for the day, or making decisions that depend on weather conditions, having reliable weather information is essential. This app aims to provide you with the most accurate and up-to-date weather data.
@@ -50,4 +51,3 @@ The application automatically displays the current day's weather and the weather
 ## Acknowledgments
 [OpenWeatherMap API](https://openweathermap.org/api) for providing reliable weather data.
 
-## [Demo](https://bbm2910.github.io/Weather--app/)
