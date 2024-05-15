@@ -1,4 +1,5 @@
 # Weather app
+![My Image](Screenshot.png)
 
 ## Introduction
 Weather affects our daily lives in countless ways. Whether you're planning a trip, choosing your outfit for the day, or making decisions that depend on weather conditions, having reliable weather information is essential. This app aims to provide you with the most accurate and up-to-date weather data.
